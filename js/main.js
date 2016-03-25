@@ -39,7 +39,7 @@ $(document).ready(function(){
   $('.slideblock .button').click(showPopup);  
   $('.contact').click(showPopup);
 
-  $('#popup :not(.container)').click(closePopup);
+  $('#popup :not(.cform)').click(closePopup);
   calculate();
   
   $('form').change(function(){

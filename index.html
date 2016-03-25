@@ -81,8 +81,8 @@
   		<div class="slide-nav"><i class="fa fa-circle-o fa-circle"></i><i class="fa fa-circle-o"></i><i class="fa fa-circle-o"></i></div>  		
   	</div>
     
-  	<div id="opaco" class="hidden">
-  		
+  	<!--Pop-up form-->
+    <div id="opaco" class="hidden">  		
   	</div>
   	<div id="popup" class="hidden">  		
 		<div class="container">
@@ -99,8 +99,40 @@
           <div id="simple-msg"></div>
         </form>
         </div>
-	</div>
+	   </div>
 
+     <!--Calculator form-->
+     <div class="calculate">
+       <div class="container">
+         <div class="row">
+            <h1>Calculate your house</h1>
+            
+            <form class="form-inline">
+              <p>Choose the number of floors:</p>
+              <label class="radio"><input type="radio" name="optionsFloor" id="optionsFloor1" value="10000"> One floor <span>10000$</span></label>
+              <label class="radio"><input type="radio" name="optionsFloor" id="optionsFloor2" value="20000" checked> Two floors <span>20000$</span></label>
+              <label class="radio"><input type="radio" name="optionsFloor" id="optionsFloor3" value="30000"> Three floors <span>30000$</span></label>
+
+              <p>Choose this option:</p>
+              <label class="radio"><input type="radio" name="options2" id="options21" value="1500"> First option <span>1500$</span></label>
+              <label class="radio"><input type="radio" name="options2" id="options22" value="1750"> Second option <span>1750$</span></label>
+              <label class="radio"><input type="radio" name="options2" id="options23" value="1000" checked> Third option <span>1000$</span></label>
+
+              <p>Choose additional options:</p>
+              <label class="checkbox"><input type="checkbox" name="options3" value="500"> One <span>500$</span></label>
+              <label class="checkbox"><input type="checkbox" name="options3" value="500"> Two <span>500$</span></label>
+              <label class="checkbox"><input type="checkbox" name="options3" value="500" checked> Three <span>500$</span></label>
+              <label class="checkbox"><input type="checkbox" name="options3" value="500"> Four <span>500$</span></label>
+              <label class="checkbox"><input type="checkbox" name="options3" value="500" checked> Five <span>500$</span></label>
+
+              <div class="center">
+                <p id="total"></p> 
+              </div>
+            </form>
+
+         </div>
+       </div>
+     </div>
     
 
     

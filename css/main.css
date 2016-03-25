@@ -55,7 +55,6 @@ margin:0;
 .slide-nav i {
   margin-right: 5px;
   padding-bottom: 10px;
-  cursor: pointer;
 }
 .slideblock h1 {
   text-transform: uppercase;
@@ -117,19 +116,24 @@ nav ul li{
   
 }
 
-
 #popup {
+  width: 100%;
   position: absolute;
-  top: 200px;
-  left: 35%;
-  width: 400px;
-}
-#opaco h2 {
-  padding-top: 30px;
-  color: white;
+  top: 0;
+  left: 0;
   text-align: center;
 }
-#opaco h2 i {
+#popup form {
+  position: relative;
+  top: 50px;
+  margin: 0 auto;
+  width: 50%;
+}
+#popup h2 {
+  padding-top: 30px;
+  color: white;
+}
+#popup h2 i {
   margin-left: 10px;
 }
 #popup input {
@@ -158,7 +162,7 @@ nav ul li{
 .hidden {
   display: none;
 }
-#opaco .fa-times {
+#popup .fa-times {
   color: white;
   font-size: 30px;
   font-weight: 200;
@@ -167,6 +171,47 @@ nav ul li{
   top: 15px;
   cursor: pointer;
 }
-#opaco .fa-times:hover {
+#popup .fa-times:hover {
   color: #3bc492;
+}
+
+
+.calculate {
+  background-color: #F8F8FF;
+}
+.calculate h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+.calculate form {
+  font-size: 16px;
+  width: 70%;
+  margin: 0 auto;
+}
+.calculate form div {
+  text-align: center;
+}
+.calculate form label {
+  font-weight: 500;
+  font-style: italic;
+}
+.calculate form p {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.calculate form span{
+  color: #4682B4;  
+}
+.calculate form label{
+  margin-left: 50px; 
+}
+#total {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #4682B4;
+  display: inline-block;
+  color: white;
 }

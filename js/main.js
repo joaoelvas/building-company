@@ -1,36 +1,49 @@
-/*//open pop-up
-function showPopup(popup_type)
-{
-  //when IE - fade immediately
-  if($.browser.msie)
-  {
-   $('#opaco').height($(document).height()).toggleClass('hidden');
-  }
-  else
-  //in all the rest browsers - fade slowly
-  {
-   $('#opaco').height($(document).height()).toggleClass('hidden').fadeTo('slow', 0.7);
-  }
-
-  $('#popup')
-   .html($('#popup_' + popup_type).html())
-   .alignCenter()
-   .toggleClass('hidden');
-
-}*/
-
 function showPopup()
 {
 
-  $('#opaco').height($(document).height()).toggleClass('hidden').fadeTo('slow', 0.9);
-  $('#popup').toggleClass('hidden').fadeTo('slow', 1);
+  $('#opaco').height($(document).height()).removeClass('hidden').fadeTo('slow', 0.9);
+  $('#popup').removeClass('hidden').fadeTo('slow', 1);
+  
+    
+};
+function closePopup()
+{
+
+  $('#opaco').height($(document).height()).addClass('hidden').fadeTo('slow', 1);
+  $('#popup').addClass('hidden').fadeTo('slow', 1);
   
     
 };
 
+
+function calculate() {
+  var option1 = $("input[name=optionsFloor]:checked").val();
+  option1 = parseFloat(option1);
+
+  var option2 = $("input[name=options2]:checked").val();
+  option2 = parseFloat(option2);
+
+  var option3 = 0;  
+  $("input[name=options3]:checked").each(function(){
+    var number = $(this).val();
+    number = parseFloat(number);
+    option3+=number;
+  });
+
+  var price=option1+option2+option3;
+
+  $('#total').text("Total price: "+price+"$");
+};
+
 $(document).ready(function(){
-  $('.slideblock .button').click(showPopup);
-  $('#popup .fa-times').click(showPopup);
+  $('.slideblock .button').click(showPopup);  
   $('.contact').click(showPopup);
-  $('#popup .container > :not(form)').click(showPopup);
+
+  $('#popup :not(.container)').click(closePopup);
+  calculate();
+  
+  $('form').change(function(){
+      calculate();
+  });
+
 });
